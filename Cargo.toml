@@ -6,4 +6,6 @@ authors = ["edelsonc <Charles.Edelson12@ncf.edu>"]
 [dependencies]
 image = "*"
 clap = "*"
-
+rss = { version = "1.5.0", features = ["from_url"] }
+reqwest = "0.9.22"
+scraper = "0.11.0"
