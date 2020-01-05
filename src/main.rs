@@ -98,7 +98,7 @@ fn main() {
     };
 
     // resize image as an option if its very large...defualts to screen width
-    let dims = vec![320u32, 160u32];
+    let dims = vec![160u32, 80u32];
 
     let img = img.resize_exact(dims[0], dims[1], image::FilterType::Nearest);
 
