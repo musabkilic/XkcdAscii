@@ -1,25 +1,9 @@
-# asciify
-Turn any image into ascii art!
+# XkcdAscii
+"Rust: A xkcd comic fetcher that converts it to ASCII art" Task for Google Code-In 2019
 
-This is a small command line application that turns images into ascii art. Written in rust, it is fast and easy to build with `cargo`.
+[![asciicast](https://asciinema.org/a/wxCg6rTvgI1ye7VZLsC9kRoWd.svg)](https://asciinema.org/a/wxCg6rTvgI1ye7VZLsC9kRoWd)
 
-# Getting Started
-First, you'll need an installation of [rust](https://www.rust-lang.org/en-US/). After installing rust, clone this reposity and build the application using `cargo`
 
-```
-$ git clone https://github.com/edelsonc/asciify
-$ cd asciify
-$ cargo build --release
-```
-
-A new directory named `target` will be created, with a `release` directory. Your executable will be there.
-
-# Examples
-An example image and output are provided above as `pixel_house.gif` and `pixel_house.txt`.
-
-The example was created using the following
-```
-$ asciify pixel_house.gif -s 200 100 > pixel_house.txt
-```
-
-This leverages the `-s` flag, which resized the image. Additionally, note that the example is very large. You may have to zoom out to prevent line wrapping.
+## Usage
+`$ cargo run -- [--comic_id {id}]`
+When the program is run with a `comic_id` variable, it fetches the comic with that id. If the comic doesn't exists it throws and error otherwise it shows the ascii represantation of the comic. Without the `comic_id` parameter, the program fetches a random comic and shows it.
